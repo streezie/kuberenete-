@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: nginx-deployment-01
 spec:
   replicas: 1
   selector:
@@ -21,9 +21,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-service
+  name: nginx-service-1
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: nginx
   ports:
